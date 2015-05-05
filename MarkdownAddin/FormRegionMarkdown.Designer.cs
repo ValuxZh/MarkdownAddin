@@ -34,37 +34,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.rtbMkdEditor = new System.Windows.Forms.RichTextBox();
-            this.wbMkdBrowser = new System.Windows.Forms.WebBrowser();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripContainer1.ContentPanel.SuspendLayout();
-            this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
-            this.toolStripContainer1.SuspendLayout();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.tscbxEditorFont = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
+            this.tscbxEditorSize = new System.Windows.Forms.ToolStripComboBox();
+            this.tsbtnEditorImg = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbtnPreview = new System.Windows.Forms.ToolStripButton();
+            this.toolStripContainer2 = new System.Windows.Forms.ToolStripContainer();
+            this.wbMkdPreview = new System.Windows.Forms.WebBrowser();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.tscbxPreviewStyle = new System.Windows.Forms.ToolStripComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.toolStripContainer1.ContentPanel.SuspendLayout();
+            this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
+            this.toolStripContainer1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
+            this.toolStripContainer2.ContentPanel.SuspendLayout();
+            this.toolStripContainer2.TopToolStripPanel.SuspendLayout();
+            this.toolStripContainer2.SuspendLayout();
+            this.toolStrip2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // toolStripContainer1
-            // 
-            // 
-            // toolStripContainer1.ContentPanel
-            // 
-            this.toolStripContainer1.ContentPanel.Controls.Add(this.splitContainer1);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(735, 568);
-            this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
-            this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Size = new System.Drawing.Size(735, 593);
-            this.toolStripContainer1.TabIndex = 0;
-            this.toolStripContainer1.Text = "toolStripContainer1";
-            // 
-            // toolStripContainer1.TopToolStripPanel
-            // 
-            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip1);
             // 
             // splitContainer1
             // 
@@ -74,62 +72,207 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.rtbMkdEditor);
+            this.splitContainer1.Panel1.Controls.Add(this.toolStripContainer1);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.wbMkdBrowser);
-            this.splitContainer1.Size = new System.Drawing.Size(735, 568);
-            this.splitContainer1.SplitterDistance = 349;
+            this.splitContainer1.Panel2.Controls.Add(this.toolStripContainer2);
+            this.splitContainer1.Size = new System.Drawing.Size(1177, 721);
+            this.splitContainer1.SplitterDistance = 579;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // toolStripContainer1
+            // 
+            // 
+            // toolStripContainer1.ContentPanel
+            // 
+            this.toolStripContainer1.ContentPanel.Controls.Add(this.rtbMkdEditor);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(579, 696);
+            this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
+            this.toolStripContainer1.Name = "toolStripContainer1";
+            this.toolStripContainer1.Size = new System.Drawing.Size(579, 721);
+            this.toolStripContainer1.TabIndex = 0;
+            this.toolStripContainer1.Text = "toolStripContainer1";
+            // 
+            // toolStripContainer1.TopToolStripPanel
+            // 
+            this.toolStripContainer1.TopToolStripPanel.Controls.Add(this.toolStrip1);
             // 
             // rtbMkdEditor
             // 
+            this.rtbMkdEditor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtbMkdEditor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtbMkdEditor.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbMkdEditor.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.rtbMkdEditor.Location = new System.Drawing.Point(0, 0);
             this.rtbMkdEditor.Name = "rtbMkdEditor";
-            this.rtbMkdEditor.Size = new System.Drawing.Size(349, 568);
+            this.rtbMkdEditor.Size = new System.Drawing.Size(579, 696);
             this.rtbMkdEditor.TabIndex = 0;
             this.rtbMkdEditor.Text = "";
             this.rtbMkdEditor.TextChanged += new System.EventHandler(this.rtbMkdEditor_TextChanged);
             // 
-            // wbMkdBrowser
-            // 
-            this.wbMkdBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.wbMkdBrowser.Location = new System.Drawing.Point(0, 0);
-            this.wbMkdBrowser.Margin = new System.Windows.Forms.Padding(10);
-            this.wbMkdBrowser.MinimumSize = new System.Drawing.Size(20, 20);
-            this.wbMkdBrowser.Name = "wbMkdBrowser";
-            this.wbMkdBrowser.Size = new System.Drawing.Size(382, 568);
-            this.wbMkdBrowser.TabIndex = 0;
-            // 
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel2,
+            this.tscbxEditorFont,
+            this.toolStripLabel3,
+            this.tscbxEditorSize,
+            this.tsbtnEditorImg,
+            this.toolStripSeparator2,
+            this.tsbtnPreview});
             this.toolStrip1.Location = new System.Drawing.Point(3, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(111, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(304, 25);
             this.toolStrip1.TabIndex = 0;
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(32, 22);
+            this.toolStripLabel2.Text = "字体";
+            // 
+            // tscbxEditorFont
+            // 
+            this.tscbxEditorFont.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tscbxEditorFont.Name = "tscbxEditorFont";
+            this.tscbxEditorFont.Size = new System.Drawing.Size(120, 25);
+            // 
+            // toolStripLabel3
+            // 
+            this.toolStripLabel3.Name = "toolStripLabel3";
+            this.toolStripLabel3.Size = new System.Drawing.Size(32, 22);
+            this.toolStripLabel3.Text = "大小";
+            // 
+            // tscbxEditorSize
+            // 
+            this.tscbxEditorSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tscbxEditorSize.Items.AddRange(new object[] {
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "14",
+            "16",
+            "18",
+            "20",
+            "22",
+            "24",
+            "26",
+            "28",
+            "36",
+            "48",
+            "72"});
+            this.tscbxEditorSize.Name = "tscbxEditorSize";
+            this.tscbxEditorSize.Size = new System.Drawing.Size(75, 25);
+            // 
+            // tsbtnEditorImg
+            // 
+            this.tsbtnEditorImg.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnEditorImg.Image = global::MarkdownAddin.Properties.Resources.Image;
+            this.tsbtnEditorImg.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnEditorImg.Name = "tsbtnEditorImg";
+            this.tsbtnEditorImg.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnEditorImg.Text = "插入图片";
+            this.tsbtnEditorImg.Visible = false;
+            this.tsbtnEditorImg.Click += new System.EventHandler(this.tsbtnEditorImg_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // tsbtnPreview
+            // 
+            this.tsbtnPreview.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnPreview.Image = global::MarkdownAddin.Properties.Resources.Preview;
+            this.tsbtnPreview.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnPreview.Name = "tsbtnPreview";
+            this.tsbtnPreview.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnPreview.Text = "Toggle Preview";
+            this.tsbtnPreview.Click += new System.EventHandler(this.tsbtnPreview_Click);
+            // 
+            // toolStripContainer2
+            // 
+            // 
+            // toolStripContainer2.ContentPanel
+            // 
+            this.toolStripContainer2.ContentPanel.Controls.Add(this.wbMkdPreview);
+            this.toolStripContainer2.ContentPanel.Size = new System.Drawing.Size(594, 696);
+            this.toolStripContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.toolStripContainer2.Location = new System.Drawing.Point(0, 0);
+            this.toolStripContainer2.Name = "toolStripContainer2";
+            this.toolStripContainer2.Size = new System.Drawing.Size(594, 721);
+            this.toolStripContainer2.TabIndex = 0;
+            this.toolStripContainer2.Text = "toolStripContainer2";
+            // 
+            // toolStripContainer2.TopToolStripPanel
+            // 
+            this.toolStripContainer2.TopToolStripPanel.Controls.Add(this.toolStrip2);
+            // 
+            // wbMkdPreview
+            // 
+            this.wbMkdPreview.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.wbMkdPreview.Location = new System.Drawing.Point(0, 0);
+            this.wbMkdPreview.MinimumSize = new System.Drawing.Size(20, 20);
+            this.wbMkdPreview.Name = "wbMkdPreview";
+            this.wbMkdPreview.Size = new System.Drawing.Size(594, 696);
+            this.wbMkdPreview.TabIndex = 0;
+            // 
+            // toolStrip2
+            // 
+            this.toolStrip2.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripLabel1,
+            this.tscbxPreviewStyle});
+            this.toolStrip2.Location = new System.Drawing.Point(3, 0);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(167, 25);
+            this.toolStrip2.TabIndex = 0;
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(32, 22);
+            this.toolStripLabel1.Text = "样式";
+            // 
+            // tscbxPreviewStyle
+            // 
+            this.tscbxPreviewStyle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tscbxPreviewStyle.Items.AddRange(new object[] {
+            "Github"});
+            this.tscbxPreviewStyle.Name = "tscbxPreviewStyle";
+            this.tscbxPreviewStyle.Size = new System.Drawing.Size(121, 25);
             // 
             // FormRegionMarkdown
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.toolStripContainer1);
+            this.Controls.Add(this.splitContainer1);
             this.Name = "FormRegionMarkdown";
-            this.Size = new System.Drawing.Size(735, 593);
+            this.Size = new System.Drawing.Size(1177, 721);
             this.FormRegionShowing += new System.EventHandler(this.FormRegionMarkdown_FormRegionShowing);
             this.FormRegionClosed += new System.EventHandler(this.FormRegionMarkdown_FormRegionClosed);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.toolStripContainer1.ContentPanel.ResumeLayout(false);
             this.toolStripContainer1.TopToolStripPanel.ResumeLayout(false);
             this.toolStripContainer1.TopToolStripPanel.PerformLayout();
             this.toolStripContainer1.ResumeLayout(false);
             this.toolStripContainer1.PerformLayout();
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            this.toolStripContainer2.ContentPanel.ResumeLayout(false);
+            this.toolStripContainer2.TopToolStripPanel.ResumeLayout(false);
+            this.toolStripContainer2.TopToolStripPanel.PerformLayout();
+            this.toolStripContainer2.ResumeLayout(false);
+            this.toolStripContainer2.PerformLayout();
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -151,11 +294,22 @@
 
         #endregion
 
-        private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.RichTextBox rtbMkdEditor;
+        private System.Windows.Forms.ToolStripContainer toolStripContainer2;
+        private System.Windows.Forms.WebBrowser wbMkdPreview;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.WebBrowser wbMkdBrowser;
+        private System.Windows.Forms.ToolStrip toolStrip2;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripComboBox tscbxPreviewStyle;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripComboBox tscbxEditorFont;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel3;
+        private System.Windows.Forms.ToolStripComboBox tscbxEditorSize;
+        private System.Windows.Forms.ToolStripButton tsbtnEditorImg;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton tsbtnPreview;
 
         public partial class FormRegionMarkdownFactory : Microsoft.Office.Tools.Outlook.IFormRegionFactory
         {

@@ -27,17 +27,35 @@
     <NoStandardLibraries>false</NoStandardLibraries>
     <RootNamespace>MarkdownAddin</RootNamespace>
     <AssemblyName>MarkdownAddin</AssemblyName>
-    <LoadBehavior>3</LoadBehavior>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <DefineConstants>VSTO40</DefineConstants>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <BootstrapperComponentsLocation>HomeSite</BootstrapperComponentsLocation>
+    <PublishUrl>发布\</PublishUrl>
+    <InstallUrl />
+    <TargetCulture>zh-chs</TargetCulture>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>days</UpdateIntervalUnits>
+    <IsWebBootstrapper>False</IsWebBootstrapper>
+    <ProductName>MarkdownAddin</ProductName>
+    <PublisherName />
+    <SupportUrl />
+    <FriendlyName>MarkdownAddin</FriendlyName>
+    <OfficeApplicationDescription />
+    <LoadBehavior>3</LoadBehavior>
   </PropertyGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
       <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
       <Visible>False</Visible>
@@ -106,8 +124,9 @@
   -->
   <ItemGroup>
     <Reference Include="Accessibility" />
-    <Reference Include="CommonMark">
+    <Reference Include="CommonMark, Version=0.1.0.0, Culture=neutral, PublicKeyToken=001ef8810438905d, processorArchitecture=MSIL">
       <HintPath>..\packages\CommonMark.NET.0.8.5\lib\net40-client\CommonMark.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -164,20 +183,30 @@
     <Compile Include="FormRegionMarkdown.Designer.cs">
       <DependentUpon>FormRegionMarkdown.cs</DependentUpon>
     </Compile>
+    <Compile Include="ImgWnd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImgWnd.Designer.cs">
+      <DependentUpon>ImgWnd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
     <EmbeddedResource Include="FormRegionMarkdown.resx">
       <DependentUpon>FormRegionMarkdown.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ImgWnd.resx">
+      <DependentUpon>ImgWnd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="MarkdownAddin_TemporaryKey.pfx" />
     <None Include="packages.config" />
@@ -188,6 +217,7 @@
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>
@@ -205,7 +235,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="markdown\highlight.js" />
-    <Content Include="markdown\markdown.html">
+    <None Include="Resources\Icons\Image.png" />
+    <None Include="Resources\Icons\link.png" />
+    <None Include="Resources\Icons\preview.png" />
+    <None Include="Resources\Icons\Local.png" />
+    <Content Include="Resources\Markdown.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="markdown\marked.js" />
@@ -266,6 +300,7 @@
     <Content Include="markdown\styles\vs.css" />
     <Content Include="markdown\styles\xcode.css" />
     <Content Include="markdown\styles\zenburn.css" />
+    <Content Include="Resources\Styles\github.css" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -275,10 +310,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>MarkdownAddin_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>MarkdownAddin_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>0E53ACF0862AF10BCAC7336350B213F765E7565D</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>3E747315DA445A8D5AC8FFF00D3A045160AA6D52</ManifestCertificateThumbprint>
   </PropertyGroup>
   <!-- Include the build rules for a C# project. -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
