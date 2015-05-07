@@ -4,6 +4,8 @@ using System.Drawing.Text;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
 using MarkdownAddin.Properties;
 using Office = Microsoft.Office.Core;
 using Outlook = Microsoft.Office.Interop.Outlook;
@@ -14,6 +16,7 @@ namespace MarkdownAddin
     {
         protected const string TMPL_CONTENT = "#TMPL_CONTENT#";
         protected const string TMPL_STYLE = "#TMPL_STYLE#";
+        protected const string REGEX_LOCAL_FILE = "(?<=src=)[\"']?(file:///)?.+\\.(png|jpg|bmp|tif|tiff|gif)[\"']?";
 
         protected string templateContent = string.Empty;
 
@@ -29,7 +32,7 @@ namespace MarkdownAddin
             // Use e.OutlookItem to get a reference to the current Outlook item.
             private void FormRegionMarkdownFactory_FormRegionInitializing(object sender, Microsoft.Office.Tools.Outlook.FormRegionInitializingEventArgs e)
             {
-
+                if (e.FormRegionMode != Outlook.OlFormRegionMode.olFormRegionCompose) e.Cancel = true;
             }
         }
 
@@ -40,8 +43,6 @@ namespace MarkdownAddin
         // Use this.OutlookFormRegion to get a reference to the form region.
         private void FormRegionMarkdown_FormRegionShowing(object sender, System.EventArgs e)
         {
-            templateContent = Resources.Markdown.Replace(TMPL_STYLE, Resources.Github);
-
             tscbxEditorFont.Items.Clear();
             var fonts = new InstalledFontCollection();
             foreach (var font in fonts.Families)
@@ -51,8 +52,16 @@ namespace MarkdownAddin
             tscbxEditorFont.SelectedItem = "微软雅黑";
             
 
-            tscbxEditorFont.SelectedIndexChanged += tscbxEditorFont_SelectedIndexChanged;
-            tscbxEditorSize.SelectedIndexChanged += tscbxEditorFont_SelectedIndexChanged;
+            tscbxEditorFont.SelectedIndexChanged += EditorFontStyleChanged;
+            tscbxEditorSize.SelectedIndexChanged += EditorFontStyleChanged;
+            
+            tscbxPreviewStyle.SelectedIndex = 0;
+
+            templateContent = Resources.Markdown.Replace(TMPL_STYLE, Resources.Github);
+
+
+            var mail = this.OutlookItem as  Outlook.MailItem;
+            var a= mail.Attachments.Add("d:\\baidu.png", Outlook.OlAttachmentType.olByValue, 56, Type.Missing);
 
         }
 
@@ -61,17 +70,12 @@ namespace MarkdownAddin
         // Use this.OutlookFormRegion to get a reference to the form region.
         private void FormRegionMarkdown_FormRegionClosed(object sender, System.EventArgs e)
         {
-        }
-
-        private void rtbMkdEditor_TextChanged(object sender, EventArgs e)
-        {
-            var html = CommonMark.CommonMarkConverter.Convert(rtbMkdEditor.Text);
-            wbMkdPreview.DocumentText = templateContent.Replace(TMPL_CONTENT, html);
-
-            var mail = Globals.ThisAddIn.Application.ActiveInspector().CurrentItem as Outlook.MailItem;
-            mail.HTMLBody = wbMkdPreview.DocumentText;
+            
 
         }
+
+    
+
 
         private void tsbtnPreview_Click(object sender, EventArgs e)
         {
@@ -79,7 +83,7 @@ namespace MarkdownAddin
 
         }
 
-        private void tscbxEditorFont_SelectedIndexChanged(object sender, EventArgs e)
+        private void EditorFontStyleChanged(object sender, EventArgs e)
         {
             float size = 11.0F;
             if (tscbxEditorSize.SelectedItem != null)
@@ -92,5 +96,45 @@ namespace MarkdownAddin
             var dialog = new ImgWnd();
             dialog.Show();
         }
+
+
+        #region editor events
+        private void rtbMkdEditor_TextChanged(object sender, EventArgs e)
+        {
+           
+
+        }
+        private void rtbMkdEditor_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        {
+            //fires when certain keys pressed
+            switch (e.KeyChar)
+            {
+                case (char)Keys.Enter:
+                case(char)Keys.Tab:
+                    Parse2Preview();
+                    break;
+            }
+
+        }
+        #endregion
+
+        private void Parse2Preview()
+        {
+            var html = CommonMark.CommonMarkConverter.Convert(rtbMkdEditor.Text);
+            var content  = templateContent.Replace(TMPL_CONTENT, html);
+            wbMkdPreview.DocumentText = content;
+        }//Parse
+
+        private void Parse2Outlook()
+        {
+        
+        }
+
+        private void UploadAttachment()
+        {
+
+
+        }
+
     }
 }

@@ -310,10 +310,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>MarkdownAddin_1_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>MarkdownAddin_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>3E747315DA445A8D5AC8FFF00D3A045160AA6D52</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>0E53ACF0862AF10BCAC7336350B213F765E7565D</ManifestCertificateThumbprint>
   </PropertyGroup>
   <!-- Include the build rules for a C# project. -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
