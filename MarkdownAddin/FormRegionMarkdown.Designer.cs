@@ -77,7 +77,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.toolStripContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(1177, 781);
+            this.splitContainer1.Size = new System.Drawing.Size(1177, 721);
             this.splitContainer1.SplitterDistance = 579;
             this.splitContainer1.TabIndex = 0;
             // 
@@ -87,11 +87,11 @@
             // toolStripContainer1.ContentPanel
             // 
             this.toolStripContainer1.ContentPanel.Controls.Add(this.rtbMkdEditor);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(579, 756);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(579, 696);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Size = new System.Drawing.Size(579, 781);
+            this.toolStripContainer1.Size = new System.Drawing.Size(579, 721);
             this.toolStripContainer1.TabIndex = 0;
             this.toolStripContainer1.Text = "toolStripContainer1";
             // 
@@ -103,10 +103,10 @@
             // 
             this.rtbMkdEditor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.rtbMkdEditor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rtbMkdEditor.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rtbMkdEditor.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.rtbMkdEditor.Location = new System.Drawing.Point(0, 0);
             this.rtbMkdEditor.Name = "rtbMkdEditor";
-            this.rtbMkdEditor.Size = new System.Drawing.Size(579, 756);
+            this.rtbMkdEditor.Size = new System.Drawing.Size(579, 696);
             this.rtbMkdEditor.TabIndex = 0;
             this.rtbMkdEditor.Text = "";
             this.rtbMkdEditor.TextChanged += new System.EventHandler(this.rtbMkdEditor_TextChanged);
@@ -125,13 +125,13 @@
             this.tsbtnPreview});
             this.toolStrip1.Location = new System.Drawing.Point(3, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(302, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(304, 25);
             this.toolStrip1.TabIndex = 0;
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(31, 22);
+            this.toolStripLabel2.Size = new System.Drawing.Size(32, 22);
             this.toolStripLabel2.Text = "字体";
             // 
             // tscbxEditorFont
@@ -143,7 +143,7 @@
             // toolStripLabel3
             // 
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(31, 22);
+            this.toolStripLabel3.Size = new System.Drawing.Size(32, 22);
             this.toolStripLabel3.Text = "大小";
             // 
             // tscbxEditorSize
@@ -201,11 +201,11 @@
             // toolStripContainer2.ContentPanel
             // 
             this.toolStripContainer2.ContentPanel.Controls.Add(this.wbMkdPreview);
-            this.toolStripContainer2.ContentPanel.Size = new System.Drawing.Size(594, 756);
+            this.toolStripContainer2.ContentPanel.Size = new System.Drawing.Size(594, 696);
             this.toolStripContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer2.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer2.Name = "toolStripContainer2";
-            this.toolStripContainer2.Size = new System.Drawing.Size(594, 781);
+            this.toolStripContainer2.Size = new System.Drawing.Size(594, 721);
             this.toolStripContainer2.TabIndex = 0;
             this.toolStripContainer2.Text = "toolStripContainer2";
             // 
@@ -217,9 +217,9 @@
             // 
             this.wbMkdPreview.Dock = System.Windows.Forms.DockStyle.Fill;
             this.wbMkdPreview.Location = new System.Drawing.Point(0, 0);
-            this.wbMkdPreview.MinimumSize = new System.Drawing.Size(20, 22);
+            this.wbMkdPreview.MinimumSize = new System.Drawing.Size(20, 20);
             this.wbMkdPreview.Name = "wbMkdPreview";
-            this.wbMkdPreview.Size = new System.Drawing.Size(594, 756);
+            this.wbMkdPreview.Size = new System.Drawing.Size(594, 696);
             this.wbMkdPreview.TabIndex = 0;
             // 
             // toolStrip2
@@ -230,13 +230,13 @@
             this.tscbxPreviewStyle});
             this.toolStrip2.Location = new System.Drawing.Point(3, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(166, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(167, 25);
             this.toolStrip2.TabIndex = 0;
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(31, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(32, 22);
             this.toolStripLabel1.Text = "样式";
             // 
             // tscbxPreviewStyle
@@ -249,13 +249,16 @@
             // 
             // FormRegionMarkdown
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.splitContainer1);
             this.Name = "FormRegionMarkdown";
-            this.Size = new System.Drawing.Size(1177, 781);
+            this.Size = new System.Drawing.Size(1177, 721);
             this.FormRegionShowing += new System.EventHandler(this.FormRegionMarkdown_FormRegionShowing);
             this.FormRegionClosed += new System.EventHandler(this.FormRegionMarkdown_FormRegionClosed);
+            this.RegionChanged += new System.EventHandler(this.FormRegionMarkdown_RegionChanged);
+            this.VisibleChanged += new System.EventHandler(this.FormRegionMarkdown_VisibleChanged);
+            this.Leave += new System.EventHandler(this.FormRegionMarkdown_Leave);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();

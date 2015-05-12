@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkdownAddin", "MarkdownAddin\MarkdownAddin.csproj", "{8CF5EEEA-AEE8-4A99-B149-FA4398006257}"
 EndProject
 Global
